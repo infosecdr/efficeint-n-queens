@@ -5,4 +5,4 @@ When I was approaching the eight queens problem (as posed in "Cracking the Codin
 
 The solution is O(q!) though it might be possible to describe it with more tight bounds.  Remarkably, with 8 queens, printing out the 72 valid solutions requires only 2057 calls to the recursive function (much less than 8! which is 40,320).  The books solution appears to be O(q^q); some shortcutting is done by the book, but 8^8 would be 16,777,216.
 
-(Originalluy posted to http://6528028.weebly.talkiforum.com/20180124/faster-solution-to-6th-ed-question-812-eight--5556799/ on 2018-01-23.)
+(Originally posted to http://6528028.weebly.talkiforum.com/20180124/faster-solution-to-6th-ed-question-812-eight--5556799/ on 2018-01-23.)
