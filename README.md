@@ -1,2 +1,7 @@
-# efficeint-n-queens
-An efficient solution to the N queens (e.g., 8 queens) problem
+# efficient-n-queens
+An efficient Pythoon solution to the N queens (e.g., 8 queens) problem, by Jim Hoagland (https://linkedin.com/jimhoagland/).  If you have something faster in Python or have an idea for how to make this faster, I'd like to see hear about it.
+
+When I was approaching the eight queens problem (as posed in "Cracking the Coding Interview" 6th ed. by Gayle Laakmann McDowell, question 8.12), I focused on as proactively as possible reducing the number of spaces to be examined for the 2nd and later calls to the routine that places a queen.  Not only does this solution I present here check a space for validity before continuing, it also keeps “notes” with aggregate info about what rows, columns, up diagonals, and down diagonals are already covered by a queen (hence ineligible to be used).  This eliminates the need to go back over previously placed queens one by one to check if there is a conflict (time required to check is O(1) instead).  This also allowed me to chose data structures that mean that invalid columns and rows never even come up as possibilities.  Through careful implementation of backtracking, I was able to reduce space used down to O(q), where q is the number of queens.
+
+The solution is O(q!) though it might be possible to describe it with more tight bounds.  Remarkably, with 8 queens, printing out the 72 valid solutions requires only 2057 calls to the recursive function (much less than 8! which is 40,320).  The books solution appears to be O(q^q); some shortcutting is done by the book, but 8^8 would be 16,777,216.
+
